@@ -9,6 +9,7 @@ const Resorts = () => {
   const [region, setRegion] = useState('')
   const [program, setProgram] = useState('')
   const [trails, setTrails] = useState('')
+  const [filters, setFilters] = useState(true)
 
   useEffect(() => {
     const getResorts = async () => {
@@ -16,10 +17,11 @@ const Resorts = () => {
         .then(res => {
           console.log(res.data)
           setResorts(res.data)
+          setFilters(true)
         })
     }
     getResorts()
-  }, [])
+  }, [filters])
 
   // console.log(search, region, program, trails)
 
@@ -78,11 +80,24 @@ const Resorts = () => {
     if (trails) {
       filtered = filtered.filter(resort => {
         console.log(trails, resort.numberOfTrails)
-        return (resort.numberOfTrails <= trails && resort.numberOfTrails > trails - 30) || resort.trails > 90
+        if (trails <= 90) {
+          return (resort.numberOfTrails <= trails && resort.numberOfTrails > trails - 30)
+        } else {
+          return (resort.numberOfTrails > 90)
+        }
       })
       console.log(filtered)
     }
     setResorts(filtered)
+  }
+
+  const clearFilter = (e) => {
+    e.preventDefault()
+    setSearch('')
+    setRegion('')
+    setProgram('')
+    setTrails('')
+    setFilters(false)
   }
 
 
@@ -104,12 +119,12 @@ const Resorts = () => {
         </p>
       </div> */}
 
-      <div className='resorts-search mt-5'>
-        <div className='container'>
+      <div className='resorts-search'>
+        <div className='container pt-5'>
           <div className="row justify-content-evenly">
             <div className="col-sm-4 col-12">
               <p className="m-2">By Region</p>
-              <select id="region" className="form-select" onChange={handleSelect}>
+              <select id="region" className="form-select" onChange={handleSelect} value={region}>
                 <option value="" defaultValue="">Region</option>
                 <option disabled={true}>—</option>
                 <option value="Central California">Central California</option>
@@ -120,7 +135,7 @@ const Resorts = () => {
 
             <div className="col-sm-4 col-12">
               <p className="m-2">By Program</p>
-              <select id="program" className="form-select" onChange={handleSelect}>
+              <select id="program" className="form-select" onChange={handleSelect} value={program}>
                 <option value="" defaultValue="">Program</option>
                 <option disabled={true}>—</option>
                 <option value="kidsProgram">Kids Program</option>
@@ -134,7 +149,7 @@ const Resorts = () => {
 
             <div className="col-sm-4 col-12">
               <p className="m-2">By Trails</p>
-              <select id="trails" className="form-select" onChange={handleSelect}>
+              <select id="trails" className="form-select" onChange={handleSelect} value={trails}>
                 <option value="" defaultValue="">Number of Trails</option>
                 <option disabled={true}>—</option>
                 <option value="30"> 1 - 30</option>
@@ -144,8 +159,9 @@ const Resorts = () => {
               </select>
             </div>
             <form className='my-5 mx-5 d-flex justify-content-center'>
-              <input type='text' placeholder='Search' className='form-control me-3' onChange={handleChange} value={search} />
-              <button className='btn btn-primary' type='submit' onClick={handleSearch}>Search</button>
+              <input type='text' id='search' placeholder='Search' className='form-control me-3' onChange={handleChange} value={search} />
+              <button className='btn btn-primary me-3' type='submit' onClick={handleSearch}>Search</button>
+              <button className='result-clear-btn' onClick={clearFilter}><a className='link' >Clear</a></button>
             </form>
           </div>
         </div>
