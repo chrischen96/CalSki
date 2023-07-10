@@ -193,22 +193,22 @@
 
 .detail-hero-img img {
   border-radius: 15px;
-  width: 60%;
+  width: 692px;
 }
 
-.resort-detail.result-list {
+.resort-detail .result-list {
   width: 692px;
   margin: 0 auto;
 }
 
-.resort-detail.result-grid {
+.resort-detail .result-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
   grid-gap: 40px;
   justify-content: center;
 }
 
-.resort-detail.result-item {
+.resort-detail .result-item {
   width: 320px;
 }
 

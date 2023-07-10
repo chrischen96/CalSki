@@ -205,7 +205,7 @@ const ResortsDetail = () => {
         </div>
       </div>
 
-      {/* <iframe height="600" src={`https://fatmap.com/activity/pistes/@${fatmap}`} width="100%"></iframe> */}
+      <iframe height="692px" src={`https://fatmap.com/activity/pistes/@${fatmap}`} width="100%"></iframe>
     </div>
   )
 }
