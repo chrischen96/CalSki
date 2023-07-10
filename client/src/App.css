@@ -7,7 +7,7 @@
 }
 
 .App-main {
-  min-height: calc(100vh - 306px);
+  min-height: calc(100vh - 226px);
 }
 
 .logo {
@@ -94,14 +94,14 @@
 }
 
 .resorts-search {
-  width: 890px;
+  width: 980px;
   margin: 0 auto;
 }
 
 /* resort result list*/
 .result-list {
   margin: 50px auto;
-  width: 890px;
+  width: 980px;
 }
 
 .result-grid {
@@ -196,19 +196,19 @@
   width: 60%;
 }
 
-.resort-detail .result-list {
+.resort-detail.result-list {
   width: 692px;
   margin: 0 auto;
 }
 
-.resort-detail .result-grid {
+.resort-detail.result-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, 320px);
   grid-gap: 40px;
   justify-content: center;
 }
 
-.resort-detail .result-item {
+.resort-detail.result-item {
   width: 320px;
 }
 
@@ -242,7 +242,7 @@
 
 /* login */
 .login, .signup {
-  min-height: calc(100vh - 306px);
+  min-height: calc(100vh - 226px);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -256,9 +256,9 @@
 }
 
 .login-content , .signup-content {
-  width: 220px;
+  width: 260px;
   margin: 45px auto;
-  translate: 0 -30px;
+  translate: 0 -40px;
 }
 
 .login button, .signup button {
@@ -273,29 +273,30 @@
 
 .contact-us {
   flex-wrap: wrap;
-  height: 160px;
+  height: 100px;
   background-color: rgb(26, 110, 171);
 }
 
 .contact-us h6 {
   display: block;
-  /* margin: 0; */
+  font-size: 12px;
+  margin: 1px;
   color: rgb(255, 251, 245);
 }
 
 .social-media {
   background-color: rgb(220, 183, 17);
-  height: 60px;
+  height: 40px;
 }
 
 .icon-row {
   /* display: flex;
   align-items: center;
   justify-content: center; */
-  padding: 14px;
+  padding: 6px;
   width: 890px;
   margin: auto;
-  height: 60px;
+  height: 40px;
 }
 
 .icon-row .bi {
