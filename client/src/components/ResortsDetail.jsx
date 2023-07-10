@@ -20,9 +20,9 @@ const ResortsDetail = () => {
         .then(res => {
           console.log(res.data.resort)
           setResort(res.data.resort)
-          setPlan({ ...plan, userName: localUser.email, resortName: res.data.resort.resortName })
           const map = res.data.resort.coordinates.replace(/ /g, '')
           setFatmap(map)
+          console.log(res.data.resort.programs)
           setPrograms(res.data.resort.programs)
         })
         .catch(err => console.log(err))
@@ -30,10 +30,11 @@ const ResortsDetail = () => {
     getResort()
   }, [])
 
-  console.log(plan)
+  console.log(programs)
 
   const handleChange = (e) => {
     setPlan({ ...plan, [e.target.name]: e.target.value })
+    setPlan({ ...plan, userName: localUser.email, resortName: res.data.resort.resortName })
   }
 
   const handleSubmit = async (e) => {

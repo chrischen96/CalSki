@@ -261,7 +261,7 @@ const resorts = [
     },
     {
       resortName: "Mammoth",
-      region: "Cental California",
+      region: "Central California",
       image: "https://www.mammothsnowman.com/wp-content/uploads/2021/07/trail_map_mammoth_mountain_ski_area-1536x842.png",
       description: "Mammoth is located in Eastern California along the east side of the Sierra Nevada mountain range. It features 1,000's of acres of terrain and an altitude that keeps things white into summer making it one of the longest ski seasons in North America. The mountain is surrounded by the protected backdrop of Mt. Whitney and Yosemite National Park.",
       verticalRise: 3100,
@@ -283,7 +283,7 @@ const resorts = [
     {
       resortName: "Mount Baldy",
       region: "Southern California",
-      image: "https://baldyresort.com/wp-content/uploads/2020/12/alpine-trail-map-with-legend.jpg",
+      image: "https://files.skimap.org/zwp53yhv6ohp1196kqi7vcccpb53.jpg",
       description: "Skiing in Southern California. 26 runs spanning 3 mountains covering 800 acres with 2,100 vertical ft. Wide open glades, tree runs, bowls, moguls, groomed runs, cornices & quarter pipes.",
       verticalRise: 2100,
       baseElevation: 6500,

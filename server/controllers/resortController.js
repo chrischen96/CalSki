@@ -7,7 +7,9 @@ const getResorts = async (req, res) => {
         const { search } = req.query
         let resorts
         if (search) {
-            resorts = await Resorts.find({ resortName: { $regex: search, $options: "i" } })
+            resorts = await Resorts.find({
+                resortName: { $regex: search, $options: "i" }
+            })
         } else (
             resorts = await Resorts.find()
         )
