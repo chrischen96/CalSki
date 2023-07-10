@@ -13,9 +13,14 @@ const Home = () => {
       <div className='home-content-2 d-flex flex-column'>
         <h1 className='text-white fs-1'>Personalize your Experience</h1>
         <h3 className='text-white ps-3 pe-3 lh-base'>All you have to do is make an account, make a plan, and enjoy your vacation! </h3>
-        <h3 className="text-white mt-1 fs-5"><Link to='/login' className='text-white icon-link link-underline-light link-underline-opacity-0 link-underline-opacity-100-hover'><span>Login or Register</span><i className="bi bi-chevron-right"></i></Link></h3>
+        <h3 className="text-white mt-4 fs-5"><Link to='/login' className='text-white icon-link link-underline-light link-underline-opacity-0 link-underline-opacity-100-hover'><span>Login or Register</span><i className="bi bi-chevron-right"></i></Link></h3>
+      </div>
+      <div className='home-content-3 d-flex flex-column'>
+        {/* <h1 className='text-white fs-1'>Personalize your Experience</h1> */}
+        <h3 className='text-black m-5 p3 lh-base'>California is home to numerous ski resorts that cater to winter sports enthusiasts of all skill levels. These resorts offer a variety of terrains, amenities, and natural beauty, making them popular destinations for locals and tourists alike.</h3>
       </div>
     </div>
+    
   )
 }
 

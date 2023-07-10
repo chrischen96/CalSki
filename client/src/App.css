@@ -63,6 +63,14 @@
   margin-bottom: 10px;
 }
 
+.home-content-3 {
+  height: 600px;
+  background-size: cover;
+  background-position: top;
+  background-image: url('./assets/diamond-peak.jpg');
+  margin-bottom: 10px;
+}
+
 
 .nav-bar {
   font-size: 20px;
@@ -93,6 +101,20 @@
 
 }
 
+.result-clear-btn {
+  position: relative;
+  background: none;
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  /* font: inherit; */
+  /* line-height: inherit; */
+  /* overflow: visible; */
+  vertical-align: inherit;
+  height: 40px
+}
+
 .resorts-search {
   width: 980px;
   margin: 0 auto;
@@ -117,7 +139,7 @@
 
 .item-card {
   border-radius: 10px;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.3);
 }
 
 .resorts .item-card {
@@ -241,7 +263,8 @@
 
 
 /* login */
-.login, .signup {
+.login,
+.signup {
   min-height: calc(100vh - 226px);
   margin: 0 auto;
   display: flex;
@@ -250,18 +273,21 @@
   background-color: rgb(248, 249, 250);
 }
 
-.login img , .signup img {
+.login img,
+.signup img {
   width: 120px;
   /* margin-bottom: 20px; */
 }
 
-.login-content , .signup-content {
+.login-content,
+.signup-content {
   width: 260px;
   margin: 45px auto;
   translate: 0 -40px;
 }
 
-.login button, .signup button {
+.login button,
+.signup button {
   width: 90px;
   height: 40px;
   border: none;
@@ -314,8 +340,8 @@
 
 @media screen and (max-width: 1000px) {
 
-  .result-list, 
-  .detail-head, 
+  .result-list,
+  .detail-head,
   .icon-row,
   .resorts-search {
     width: 692px;
@@ -329,7 +355,7 @@
 @media screen and (max-width: 734px) {
 
   .result-list,
-  .detail-head, 
+  .detail-head,
   .icon-row,
   .resorts-search,
   .resort-detail .result-list {
